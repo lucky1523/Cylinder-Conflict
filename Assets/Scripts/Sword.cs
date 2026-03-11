@@ -77,6 +77,7 @@ public class Sword : MonoBehaviour
         if (!isLookedAt) return;
         AudioManager.Instance.PlayAudioSFX(collectibleSound, 0.8f);
         GameManager.Instance.swordsNumber--;
+        UIManager.Instance.pressFText.gameObject.SetActive(false);
         Destroy(gameObject);
     }
 }
